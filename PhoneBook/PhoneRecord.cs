@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-
+using static System.Console;
 
     internal class PhoneRecord
     {
@@ -17,6 +17,11 @@ using System.Collections.Generic;
             PhoneNumber = phoneNumber;
             Address = address;
         }
+
+        ~PhoneRecord() 
+        { 
+            WriteLine("Destroying instance of PhoneRecord class..."); 
+        } 
 
         public void Update(string firstName, string lastName, string phoneNumber, string address)
         {
